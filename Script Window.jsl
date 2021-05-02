@@ -1,0 +1,97 @@
+
+Fit Group(
+	Bivariate(
+		Y( :Removal ),
+		X( :OD ),
+		Fit Line( {Plot Residuals( 1 ), Line Color( {212, 73, 88} )} ),
+		SendToReport(
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by Predicted Plot"},
+				"Bivar Resid vs Predict Plot",
+				FrameBox,
+				{Frame Size( 320, 199 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by Predicted Plot"},
+				"Bivar Resid vs Predict Plot",
+				FrameBox( 2 ),
+				{Frame Size( 163, 199 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Actual by Predicted Plot"},
+				"Bivar Actual vs Predict Plot",
+				FrameBox,
+				{Frame Size( 457, 236 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by Row Plot"},
+				"Bivar Resid vs Row Plot",
+				FrameBox,
+				{Frame Size( 461, 257 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by X Plot"},
+				"Bivar Resid vs X Plot",
+				FrameBox,
+				{Frame Size( 479, 205 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual Normal Quantile Plot"},
+				"Bivar Resid Quantile Plot",
+				FrameBox,
+				{Frame Size( 471, 312 )}
+			)
+		)
+	),
+	Bivariate(
+		Y( :Removal ),
+		X( :ID ),
+		Fit Line( {Plot Residuals( 1 ), Line Color( {212, 73, 88} )} ),
+		SendToReport(
+			Dispatch( {}, "Bivar Plot", FrameBox, {Frame Size( 354, 240 )} ),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by Predicted Plot"},
+				"Bivar Resid vs Predict Plot",
+				FrameBox,
+				{Frame Size( 320, 206 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by Predicted Plot"},
+				"Bivar Resid vs Predict Plot",
+				FrameBox( 2 ),
+				{Frame Size( 160, 206 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Actual by Predicted Plot"},
+				"Bivar Actual vs Predict Plot",
+				FrameBox,
+				{Frame Size( 442, 241 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by Row Plot"},
+				"Bivar Resid vs Row Plot",
+				FrameBox,
+				{Frame Size( 494, 270 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual by X Plot"},
+				"Bivar Resid vs X Plot",
+				FrameBox,
+				{Frame Size( 522, 245 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual Normal Quantile Plot"},
+				"1",
+				ScaleBox,
+				{Min( 0.00118005264486075 ), Max( 0.988235294117647 ), Inc( 0.1 ), Minor Ticks( 0 )}
+			),
+			Dispatch(
+				{"Linear Fit", "Diagnostics Plots", "Residual Normal Quantile Plot"},
+				"Bivar Resid Quantile Plot",
+				FrameBox,
+				{Frame Size( 537, 314 )}
+			)
+		)
+	),
+	<<{Arrange in Rows( 2 )}
+);
